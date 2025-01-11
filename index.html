@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应用下载列表</title>
+    <style>
+        /* 统一的页面样式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* 容器样式 */
+        .app-container {
+            width: 100%;
+            max-width: 480px;  /* 设置最大宽度，适配手机屏幕 */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* 应用卡片列表 */
+        .app-card {
+            background-color: #fff5e1;  /* 奶白色背景 */
+            border-radius: 12px;         /* 圆角效果 */
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* 阴影效果 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 动画效果 */
+        }
+
+        /* 鼠标悬停时放大效果 */
+        .app-card:hover {
+            transform: scale(1.05);  /* 微微放大 */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);  /* 放大时阴影变强 */
+        }
+
+        /* 应用卡片标题 */
+        .app-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        /* 应用卡片描述 */
+        .app-description {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* 下载按钮 */
+        .download-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #ffad33;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        /* 按钮悬停效果 */
+        .download-btn:hover {
+            background-color: #ff8c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- 第一张应用卡片 -->
+        <div class="app-card">
+            <div class="app-title">App名称 1</div>
+            <div class="app-description">这是一个描述文本。可以在这里写一些关于这个应用的简短信息。</div>
+            <a href="#" class="download-btn">立即下载</a>
+        </div>
+
+        <!-- 第二张应用卡片 -->
+        <div class="app-card">
+            <div class="app-title">App名称 2</div>
+            <div class="app-description">这是另一个应用的描述。这个应用非常好用，赶紧下载吧！</div>
+            <a href="#" class="download-btn">立即下载</a>
+        </div>
+
+        <!-- 第三张应用卡片 -->
+        <div class="app-card">
+            <div class="app-title">App名称 3</div>
+            <div class="app-description">体验全新的应用，提供更快的服务。下载体验吧！</div>
+            <a href="#" class="download-btn">立即下载</a>
+        </div>
+    </div>
+</body>
+</html>
