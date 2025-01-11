@@ -5,41 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlightMotion下载站</title>
     <style>
-        /* 统一的页面样式 */
+        /* 全局样式 */
         body {
             font-family: Arial, sans-serif;
             background-color: #f8f8f8;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             box-sizing: border-box;
         }
 
-        /* 容器样式 */
+        /* 使页面内容居中 */
         .app-container {
             width: 100%;
-            max-width: 480px;  /* 设置最大宽度，适配手机屏幕 */
+            max-width: 480px;
             padding: 20px;
+            margin-top: 80px; /* 给导航栏留出空间 */
             box-sizing: border-box;
         }
 
-        /* 应用卡片列表 */
+        /* 导航栏样式 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            border-radius: 12px;
+            z-index: 1000;
+        }
+
+        /* LOGO样式 */
+        .navbar .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            overflow: hidden; /* 避免图片超出圆角 */
+            margin-right: 15px;
+        }
+
+        .navbar .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 保证图片填满容器 */
+        }
+
+        /* 导航栏文字 */
+        .navbar .title {
+            font-size: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* 卡片样式 */
         .app-card {
             background-color: #fff;  /* 奶白色背景 */
             border-radius: 12px;         /* 圆角效果 */
             padding: 15px;
             margin-bottom: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* 阴影效果 */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 动画效果 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
         }
 
-        /* 鼠标悬停时放大效果 */
+        /* 卡片悬浮效果 */
         .app-card:hover {
-            transform: scale(1.05);  /* 微微放大 */
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);  /* 放大时阴影变强 */
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 卡片出现的动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* 应用卡片标题 */
@@ -74,30 +122,40 @@
         .download-btn:hover {
             background-color: #ff8c00;
         }
+
     </style>
 </head>
 <body>
+
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/75/95/78/75957825-6a0c-d021-8730-363a4aa5dd94/AppIcon-0-0-1x_U007emarketing-0-4-0-0-0-0-85-220.png/246x0w.webp" alt="LOGO">
+        </div>
+        <!-- 导航栏标题 -->
+        <div class="title">AlightMotion下载站</div>
+    </div>
+
+    <!-- 应用卡片列表 -->
     <div class="app-container">
-        <!-- 第一张应用卡片 -->
         <div class="app-card">
-            <div class="app-title">App名称 1</div>
-            <div class="app-description">这是一个描述文本。可以在这里写一些关于这个应用的简短信息。</div>
-            <a href="#" class="download-btn">立即下载</a>
+            <div class="app-title">Alight Motion</div>
+            <div class="app-description">V5.0原版汉化破解，豪用！</div>
+            <a href="/fill/Alight Motion_5.0.229.1001615" class="download-btn">立即下载</a>
         </div>
 
-        <!-- 第二张应用卡片 -->
         <div class="app-card">
-            <div class="app-title">App名称 2</div>
-            <div class="app-description">这是另一个应用的描述。这个应用非常好用，赶紧下载吧！</div>
-            <a href="#" class="download-btn">立即下载</a>
+            <div class="app-title">Alight Motion</div>
+            <div class="app-description">V5.0原版汉化破解，功能太少了</div>
+            <a href="/fill/Alight Motion v4.0.4.apk" class="download-btn">立即下载</a>
         </div>
-
-        <!-- 第三张应用卡片 -->
+        
         <div class="app-card">
             <div class="app-title">App名称 3</div>
             <div class="app-description">体验全新的应用，提供更快的服务。下载体验吧！</div>
             <a href="#" class="download-btn">立即下载</a>
         </div>
     </div>
+
 </body>
 </html>
