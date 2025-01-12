@@ -222,7 +222,21 @@
             </div>
             <div class="app-title">Alight Motion</div>
             <div class="app-description">官方V5.0</div>
-            <a href="http://cloud.alightmotiondwl.us.kg/download.php?id=4&tk=c9fba98f6b547ad8436c3337d400cbc6" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" class="download-btn">立即下载</a><br>
+        <?php
+// 生成一个唯一的 token
+function generateToken($id) {
+    return bin2hex(random_bytes(16)) . '-' . $id; // 生成随机 token
+}
+
+// 假设文件 ID
+$fileId = 4; // 这里可以是从数据库中获取的文件 ID
+$token = generateToken($fileId);
+
+// 生成下载链接
+$downloadLink = "https://cloud.alightmotiondwl.us.kg/download.php?id=$fileId&tk=$token";
+echo "下载链接: <a href='$downloadLink'>点击下载</a>";
+?>
+<br>
             <a href="https://apps.apple.com/us/app/id1459833443" class="download-btn">IOS下载</a>
         </div>
 
@@ -232,7 +246,7 @@
             </div>
             <div class="app-title">Alight Motion</div>
             <div class="app-description">官方汉化V5.0</div>
-            <a href="http://cloud.alightmotiondwl.us.kg/download.php?id=3&tk=7fd75ce5c4ea1883e1440342bb8c6ff5" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" class="download-btn">立即下载</a>
+            <a href="http://cloud.alightmotiondwl.us.kg/download.php?id=3" oncontextmenu="return false;" onselectstart="return false;" onmousedown="return false;" class="download-btn">立即下载</a>
         </div>
 
 <div class="app-card">
